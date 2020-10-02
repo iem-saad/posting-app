@@ -1,0 +1,3 @@
+Hi <%= @user.user_name %>
+Welcome to The Sample Posting App! Click on the link Below To Activate Your Account:
+<%= edit_account_activation_url(@user.activation_token, email: @user.email)%>

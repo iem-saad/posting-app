@@ -1,0 +1,23 @@
+<%= form_for @post  do |f| %>
+     
+     <div class = "text-center"> 
+          <%= f.label  :title%>
+          <%= f.text_field :title%>
+     </div>
+     
+
+     <div class = "text-center"> 
+          <%= f.label  :description%>
+          <%= f.text_area :description%>
+     </div>
+
+     <div class = "text-center">
+        <%# <%= f.select :user_id, User.all.collect { |p| [ p.user_name, p.id ] } %> 
+        <%= select_tag :user_id, options_for_select(User.all.collect{|x| [x.user_name,x.id]}) %>
+     </div>
+
+     <div class = "text-center"> 
+          <%= f.submit %>
+     </div>
+    
+<% end %>

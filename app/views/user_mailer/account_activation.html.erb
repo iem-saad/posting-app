@@ -1,0 +1,6 @@
+<h1> Saad's Posting App </h1>
+<p> Hi <%= @user.user_name %>, </p>
+<p>
+Welcome to The Sample Posting App! Click on the link Below To Activate Your Account:
+</p>
+<%= link_to 'Activate', edit_account_activation_url(@user.activation_token, email: @user.email) %>
